@@ -14,10 +14,10 @@ class AddNewAttributesUsersTable extends Migration
     public function up()
     {
         Schema::table( 'users', function ( Blueprint $table ) {
-            $table->string( 'web_site' );
-            $table->text( 'presentation' );
+            $table->string( 'web_site' )->nullable();
+            $table->text( 'presentation' )->nullable();
             $table->boolean( 'status' )->default( 0 );
-            $table->string( 'nick_name' );
+            $table->string( 'nick_name' )->unique();
 
         } );
     }
