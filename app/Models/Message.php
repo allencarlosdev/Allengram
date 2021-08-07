@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'chat_id',
+        'user_id',
+        'message',
+        'file_path',
+        'file_name',
+        'send_date',
+        'type',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo( 'User::class' );
+    }
+    public function chat()
+    {
+        return $this->belongsTo( 'Chat::class' );
+    }
 }
