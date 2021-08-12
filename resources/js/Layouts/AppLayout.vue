@@ -31,7 +31,12 @@
                         </div>
                         <!--Search component -->
                         <div class="ml-3 relative">
-                            <dropdown align="right" width="48">
+                            <dropdown
+                                align="center"
+                                width="100"
+                                overflow="overflow-y-auto"
+                                maxheight="300"
+                            >
                                 <template #trigger>
                                     <div
                                         class="
@@ -45,6 +50,7 @@
                                             class="
                                                 border-2 border-gray-300
                                                 bg-white
+                                                w-100
                                                 h-10
                                                 px-5
                                                 pr-16
@@ -53,7 +59,6 @@
                                                 focus:outline-none
                                             "
                                             type="search"
-                                            name="search"
                                             placeholder="Search"
                                         />
                                         <span
@@ -95,7 +100,38 @@
                                     </div>
                                 </template>
 
-                                <template #content> </template>
+                                <template #content>
+                                    <a
+                                        href=""
+                                        class="
+                                            block
+                                            flex
+                                            items-center
+                                            py-2
+                                            px-3
+                                            hover:bg-gray100
+                                        "
+                                        ><img src="" alt="Carlos" />
+                                        <div class="ml-2">
+                                            <span
+                                                class="
+                                                    block
+                                                    font-bold
+                                                    text-gray-700 text-sm
+                                                "
+                                                >Carlos93</span
+                                            >
+                                            <span
+                                                class="
+                                                    text-sm
+                                                    font-light
+                                                    text-gray-400
+                                                "
+                                                >Carlos Allen</span
+                                            >
+                                        </div></a
+                                    >
+                                </template>
                             </dropdown>
                         </div>
                         <!--end search component -->
