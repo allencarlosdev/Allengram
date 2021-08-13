@@ -47,6 +47,8 @@
                                         "
                                     >
                                         <input
+                                            v-model="search"
+                                            @keyup="userSearch"
                                             class="
                                                 border-2 border-gray-300
                                                 bg-white
@@ -695,6 +697,8 @@ export default {
     data() {
         return {
             showingNavigationDropdown: false,
+            users: [],
+            search: "",
         };
     },
 
@@ -713,6 +717,11 @@ export default {
 
         logout() {
             this.$inertia.post(route("logout"));
+        },
+        async userSearch() {
+            await axios.get("/search/" + this.search).then((response) => {
+                this.users = response.data;
+            });
         },
     },
 };
