@@ -59,7 +59,10 @@
                                                 pr-16
                                                 rounded-lg
                                                 text-sm
-                                                focus:outline-none
+                                                focus:border-gray-400
+                                                focus:ring-6
+                                                focus:ring-gray-100
+                                                focus:ring-opacity-50
                                             "
                                             type="search"
                                             placeholder="Search"
