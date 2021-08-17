@@ -44,6 +44,7 @@
                                             relative
                                             mx-auto
                                             text-gray-600
+                                            focus:outline-none
                                         "
                                     >
                                         <input
@@ -104,6 +105,8 @@
 
                                 <template #content>
                                     <a
+                                        v-for="(user, index) in users"
+                                        :key="index"
                                         href=""
                                         class="
                                             block
@@ -113,7 +116,10 @@
                                             px-3
                                             hover:bg-gray100
                                         "
-                                        ><img src="" alt="Carlos" />
+                                        ><img
+                                            :src="user.profile_photo_path"
+                                            :alt="user.name"
+                                        />
                                         <div class="ml-2">
                                             <span
                                                 class="
@@ -121,7 +127,7 @@
                                                     font-bold
                                                     text-gray-700 text-sm
                                                 "
-                                                >Carlos93</span
+                                                >{{ user.nick_name }}</span
                                             >
                                             <span
                                                 class="
@@ -129,7 +135,7 @@
                                                     font-light
                                                     text-gray-400
                                                 "
-                                                >Carlos Allen</span
+                                                >{{ user.name }}</span
                                             >
                                         </div></a
                                     >

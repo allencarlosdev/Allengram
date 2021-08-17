@@ -13,7 +13,7 @@
             text-xs text-white
             uppercase
             tracking-widest
-            hover:bg-gray-700
+            hover:bg-blue-700
             active:bg-gray-900
             focus:outline-none
             focus:border-gray-900
